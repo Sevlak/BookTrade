@@ -1,0 +1,15 @@
+﻿services:
+  booktrade.database:
+    restart: always
+    image: postgres
+    environment:
+      POSTGRES_DB: BookTrade
+      POSTGRES_USER: develop
+      POSTGRES_PASSWORD: develop
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
