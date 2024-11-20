@@ -1,0 +1,6 @@
+﻿/* This works because of CSS isolation bundling: https://learn.microsoft.com/en-us/aspnet/core/mvc/views/overview?view=aspnetcore-9.0#css-isolation
+This will be rendered on the BookTrade.Web.css file, with some alphanumeric code alongside so that we "isolate" which css works on which page.*/
+
+#map {
+    height: 100%;
+}
