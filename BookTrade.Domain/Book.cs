@@ -10,7 +10,7 @@ public class Book: Entity
     public string? Description { get; set; }
     public DateOnly PublishedOn { get; set; }
     public Condition Condition { get; set; }
-    public ICollection<Category> Categories { get; set; }
+    public ICollection<Category> Categories { get; set; } = new List<Category>();
 
     /*
      TODO: This should be the overall book rating on our system.

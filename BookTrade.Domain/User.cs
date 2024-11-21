@@ -7,10 +7,14 @@ public class User: Entity
     public string Name { get; set; }
     public Location Location { get; set; }
 
-    private ICollection<Book> BooksAvailableForTrade { get; set; }
-    private ICollection<Trade> TradedBooks { get; set; }
+    public ICollection<Book> BooksAvailableForTrade { get; set; } = new List<Book>();
 
-    public int TotalTradedBooks => TradedBooks.Count;
+    public ICollection<Trade> InitiatedTrades { get; set; } = new List<Trade>();
+    public ICollection<Trade> ReceivedTrades { get; set; } = new List<Trade>();
+
+    public IEnumerable<Trade> TradedBooks => InitiatedTrades.Concat(ReceivedTrades);
+
+    public int TotalTradedBooks => TradedBooks.Count();
 
     /* TODO: This one should represent how trustworthy this user is
             when specifying book conditions and trading. */

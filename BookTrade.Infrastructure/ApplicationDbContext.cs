@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookTrade.Infrastructure;
 
-public class ApplicationDbContext(DbContextOptions options) : IdentityDbContext(options)
+public class ApplicationDbContext(DbContextOptions options) : IdentityDbContext<AppUser>(options)
 {
     protected override void OnModelCreating(ModelBuilder builder)
     {
