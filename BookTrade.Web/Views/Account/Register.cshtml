@@ -1,0 +1,52 @@
+﻿@model RegisterViewModel
+
+@{
+    Layout = "_AccountLayout";
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center min-vh-100">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-lg">
+                <div class="card-body p-5">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-user-plus fa-3x text-primary"></i>
+                    </div>
+                    <h2 class="card-title text-center mb-4">Register</h2>
+                    <form asp-action="Register" method="POST">
+                        <div class="mb-3">
+                            <label asp-for="Username" class="form-label">Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input asp-for="Username" class="form-control" required>
+                                <span asp-validation-for="Username" class="container text-danger mt-3 p-0"></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                <input asp-for="Email" class="form-control" required>
+                                <span asp-validation-for="Email" class="container text-danger mt-3 p-0"></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                <input asp-for="Password" class="form-control" required>
+                                <span asp-validation-for="Password" class="container text-danger mt-3 p-0"></span>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input asp-for="AgreedToTermsAndConditions" type="checkbox" class="form-check-input" required>
+                            <label class="form-check-label" asp-for="AgreedToTermsAndConditions">I agree to the Terms and Conditions.</label>
+                            <span asp-validation-for="AgreedToTermsAndConditions" class="text-danger mt-3 p-0"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

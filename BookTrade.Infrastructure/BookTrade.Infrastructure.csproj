@@ -21,4 +21,11 @@
         <ProjectReference Include="..\BookTrade.Domain\BookTrade.Domain.csproj"/>
     </ItemGroup>
 
+    <!--
+        Isso faz com que o SignInManager consiga ser usado, pois ele faz parte do Microsoft.AspNetCore.App.Ref
+        https://learn.microsoft.com/en-us/answers/questions/1327368/how-can-i-install-the-nuget-package-microsoft-aspn
+    -->
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+    </ItemGroup>
 </Project>

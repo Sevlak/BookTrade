@@ -1,9 +1,11 @@
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using BookTrade.Web.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BookTrade.Web.Controllers;
 
+[Authorize]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;

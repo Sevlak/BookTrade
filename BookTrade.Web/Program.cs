@@ -1,3 +1,4 @@
+using BookTrade.Application;
 using BookTrade.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,7 +17,8 @@ public class Program
             .AddAuthentication()
             .AddCookie();
 
-        builder.Services.AddInfrastructure(builder.Configuration, builder.Environment);
+        builder.Services.AddInfrastructure(builder.Configuration, builder.Environment)
+            .AddApplication();
 
         var app = builder.Build();
 
