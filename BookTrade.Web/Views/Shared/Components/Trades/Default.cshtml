@@ -1,8 +1,18 @@
 ﻿@model List<string>
 
-<ul>
+<div class="row g-4">
     @foreach (var test in Model)
     {
-        <li>@test</li>
+        <div class="col-md-6">
+            <div class="trade-card p-3 d-flex align-items-center justify-content-between">
+                <div class="icon-circle">
+                    <span>Icon1</span>
+                </div>
+                <i class="bi bi-arrow-right text-muted fs-4"></i>
+                <div class="icon-circle">
+                    <span>Icon2</span>
+                </div>
+            </div>
+        </div>
     }
-</ul>
+</div>
