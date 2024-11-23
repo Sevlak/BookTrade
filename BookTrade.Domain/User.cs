@@ -4,8 +4,7 @@ namespace BookTrade.Domain;
 
 public class User: Entity
 {
-    public string Name { get; set; }
-    public Location Location { get; set; }
+    public Location? Location { get; set; }
 
     public ICollection<Book> BooksAvailableForTrade { get; set; } = new List<Book>();
 
